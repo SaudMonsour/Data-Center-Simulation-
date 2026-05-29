@@ -1,0 +1,39 @@
+Act as an expert Full-Stack Web Developer and High-Performance Computing (HPC) Infrastructure Engineer. Your task is to create a complete, production-ready, and highly interactive "AI Data Center Simulator" application contained within a single HTML file (utilizing Vanilla JavaScript and Tailwind CSS via CDN for styling). 
+
+The primary goal of this application is educational, allowing a beginner to explore an AI-focused data center through hands-on virtual exploration. 
+
+The application must include the following core views and features, smoothly transitioning between them:
+
+1. LEVEL 1: DATA CENTER FLOOR PLAN (The Bird's-Eye View)
+- A modern, dark-themed dashboard showing a grid layout of server rows and racks (e.g., Row A, Row B, Row C).
+- Include visual indicators for Data Center health: Total Power Consumption (MW), PUE (Power Usage Effectiveness) live counter (simulated around 1.1 - 1.2 for modern AI DCs), and Cooling status.
+- Every Server Rack must be clickable. Hovering over a rack should highlight it and show a mini-tooltip (e.g., "AI Training Rack #04 - Status: Nominal").
+
+2. LEVEL 2: THE RACK VIEW (Chassis/Server Level)
+- When a user clicks on a rack, the UI must smoothly transition (or open a detailed overlay) to show the vertical anatomy of that specific 42U/48U AI server rack.
+- The rack must contain:
+  * Multiple AI Server Nodes (e.g., HGX/DGX style 8x GPU nodes).
+  * InfiniBand/Ethernet High-Speed Network Switches (e.g., 800Gbps switches).
+  * Power Distribution Units (PDUs).
+  * Liquid Cooling Manifolds/Tubes.
+- Every component within the rack must be interactive and clickable.
+
+3. LEVEL 3: COMPONENT INSPECTOR (Hardware Level)
+- Clicking on an AI Server Node must open an interactive inspector that breaks down its internal components visually:
+  * GPUs (e.g., NVIDIA H100 or Blackwell style): Clicking it opens an educational card explaining VRAM (HBM3), Tensor Cores, NVLink interconnectivity, and its role in AI Training/Inference.
+  * CPUs (e.g., AMD EPYC or Intel Xeon): Clicking it explains host processing, PCIe Gen 5 lanes orchestration, and system management.
+  * RAM (System Memory): Clicking it explains DDR5 capacity and system caching.
+  * Liquid Cooling Block: Clicking it explains how direct-to-chip liquid cooling handles high TDP (Thermal Design Power) of AI chips compared to traditional air cooling.
+
+4. EDUCATIONAL SIDEBAR / INFO PANEL
+- Whenever a user clicks on ANY component (Rack, Switch, GPU, CPU, Cooling, PDU), a dedicated, beautiful sidebar must update with detailed information:
+  * Component Name & Real-world Analog (e.g., "NVIDIA H100 Tensor Core GPU").
+  * Core Function (Written in simple, clear, yet technically accurate language for a beginner).
+  * Simulated Live Metrics: Show dynamic bars or numbers for: Temperature (°C), Power Draw (Watts), and Utilization (%). For example, a GPU under "AI Training" load should show high power and 95% utilization.
+
+5. UI/UX REQUIREMENTS
+- Design: Cyberpunk / High-Tech enterprise data center aesthetic (Deep dark blues/greys background, neon greens for normal status, amber for high load, cyan for cooling).
+- Clean Navigation: Provide a clear "Back to Floor Plan" or "Back to Rack View" breadcrumb/button so the user never gets lost.
+- No Placeholders: Do NOT write comments like "// add code here" or "// add more components later". Every single feature, component text, and interactive click handler must be fully written out and functional.
+
+Generate the entire application inside a single, beautifully organized HTML block code containing the <!DOCTYPE html>, <head> with Tailwind CDN, <style> for any custom animations/css, and the complete integrated <script> for the simulator logic.
